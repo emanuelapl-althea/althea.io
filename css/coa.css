@@ -809,7 +809,9 @@ display: grid;
 
 /* Pagination basse + watch topic */
 .topic-footer__row{
-  display:flex;
+      display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   align-items:center;
   justify-content:space-between;
   gap:10px;
