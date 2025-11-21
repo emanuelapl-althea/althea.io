@@ -301,7 +301,7 @@ display: grid;
 
 /* -------- entêtes colonnes (sticky visuel) -------- */
 .pm-headerrow{
-  display:grid; grid-template-columns: 1fr 200px 140px 40px;
+  display:grid; grid-template-columns: 1fr 140px 90px 100px;
   gap:10px; align-items:center;
   padding:8px 10px; border-radius:12px;
   background:#f6efe2; border:1px solid rgba(0,0,0,.05);
@@ -368,7 +368,7 @@ display: grid;
 /* responsive */
 @media (max-width: 760px){
   .pm-headerrow, .pm-item{
-    grid-template-columns: 1fr 140px 110px 30px;
+    grid-template-columns:1fr 140px 90px 100px;
   }
 }
 @media (max-width: 580px){
