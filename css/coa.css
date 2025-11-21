@@ -95,7 +95,10 @@ display: grid;
     grid-column: 1 / 4;
     grid-row: 5;
 }
-
+.coa-fview__info-grid p.gensmall.coa-fview__info-toggle {
+    grid-column: 4 / 5;
+    grid-row: 5;
+}
 .coa-fview__breadcrumb-secondary a {
   color: var(--gold-2);
   font-weight: 600;
