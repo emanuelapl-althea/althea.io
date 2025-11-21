@@ -22,8 +22,8 @@
 /* Bouton "Nouveau sujet" (haut) */
 .coa-fview__newtopic .coa-btn-newtopic img {
   display: block;
-  width: 32px;
-  height: 32px;
+  width: auto;
+  height: auto;
 }
 
 /* Breadcrumb déjà stylé via .nav, on se contente de l’agencer */
@@ -166,8 +166,8 @@
 }
 
 .coa-fview__legend-col img {
-  width: 18px;
-  height: 18px;
+  width: auto;
+  height: auto;
 }
 
 /* ===== RESPONSIVE ===== */
