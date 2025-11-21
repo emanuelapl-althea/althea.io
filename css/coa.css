@@ -1,0 +1,194 @@
+/* ================================
+   COA — PAGE VIEWFORUM (coa-fview)
+   ================================ */
+
+/* Wrapper général de la page forum */
+.coa-fview {
+  max-width: 810px;
+  margin: 30px auto 40px;
+  padding: 0 0 8px;
+  display: grid;
+  gap: 20px;
+}
+
+/* ===== HEADER ===== */
+.coa-fview__header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Bouton "Nouveau sujet" (haut) */
+.coa-fview__newtopic .coa-btn-newtopic img {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
+/* Breadcrumb déjà stylé via .nav, on se contente de l’agencer */
+.coa-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* Plus menu à droite */
+.coa-fview__plusmenu {
+  text-align: right;
+}
+
+/* ===== BLOC INFOS (info_open / info_close) ===== */
+
+.coa-fview__info {
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(0,0,0,.06);
+  background: #fffdfa;
+  box-shadow: var(--shadow);
+}
+
+/* version ouverte */
+.coa-fview__info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+  gap: 10px;
+  align-items: center;
+}
+
+.coa-fview__info-item {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.coa-fview__breadcrumb-secondary {
+  font-size: 0.8rem;
+}
+
+.coa-fview__breadcrumb-secondary a {
+  color: var(--gold-2);
+  font-weight: 600;
+}
+
+/* bouton +/- */
+.coa-fview__info-toggle img {
+  width: 22px;
+  height: 22px;
+}
+
+/* version repliée */
+.coa-fview__info-compact {
+  display: grid;
+  gap: 10px;
+}
+
+.coa-fview__info-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.coa-fview__info-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== FOOTER ===== */
+
+.coa-fview__footer {
+  display: grid;
+  gap: 18px;
+}
+
+/* haut du footer : bouton + formulaires */
+.coa-fview__footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.coa-fview__controls {
+  display: flex;
+  gap: 16px;
+}
+
+/* Tri */
+.coa-fview__sort.sort-form {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Jumpbox */
+.coa-fview__jump {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Inputs : on réutilise ton style global */
+.coa-fview__sort select,
+.coa-fview__jump select {
+  padding: 4px 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,.12);
+  background: #fff;
+  font-size: 0.8rem;
+}
+
+/* ===== LÉGENDE ===== */
+
+.coa-fview__legend {
+  padding: 16px 18px;
+  background: #faf4ea;
+  border-radius: var(--radius);
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: var(--shadow);
+}
+
+.coa-fview__legend-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+  gap: 16px;
+}
+
+.coa-fview__legend-col p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 3px 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.coa-fview__legend-col img {
+  width: 18px;
+  height: 18px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 720px) {
+  .coa-fview__header {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+  }
+
+  .coa-fview__plusmenu {
+    grid-column: 1 / -1;
+  }
+
+  .coa-fview__footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .coa-fview__controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
