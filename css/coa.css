@@ -388,3 +388,572 @@ display: grid;
 /* util */
 .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
+
+
+/* ==========================
+   City of Angels — Topic view
+   (version COA / Golden Horizon)
+   ========================== */
+
+/* ========= WRAPPER ========= */
+
+.wrapper.coa-topicpage{
+  max-width:1100px;
+  margin:24px auto;
+  padding:clamp(12px,2vw,18px);
+  background:
+    radial-gradient(900px 420px at 50% -260px, rgba(200,170,110,.13), transparent 60%),
+    linear-gradient(0deg, rgba(255,255,255,.35), rgba(255,255,255,.35)),
+    var(--bg);
+  border-radius:calc(var(--radius) + 6px);
+  border:1px solid rgba(0,0,0,.03);
+  box-shadow:var(--shadow);
+}
+
+/* ========= TOPIC HEADER ========= */
+
+.coa-topichead{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  margin-bottom:18px;
+}
+
+/* Barre outils hautes */
+.topic-tools{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:10px;
+  flex-wrap:wrap;
+  font-size:13px;
+}
+
+.topic-tools__left,
+.topic-tools__right{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+/* Boutons stylés */
+.tbtn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 14px;
+  border-radius:999px;
+  border:1px solid rgba(0,0,0,.06);
+  background:linear-gradient(180deg,#e9d9b6,#cdb27e);
+  color:#2b231d;
+  font-weight:700;
+  font-size:12px;
+  text-decoration:none;
+  box-shadow:0 8px 18px var(--ring), inset 0 1px 0 rgba(255,255,255,.55);
+  cursor:pointer;
+}
+
+.tbtn img{ max-height:14px; }
+
+.tbtn--ghost{
+  background:#fffdfa;
+  box-shadow:var(--shadow-sm);
+}
+
+.tbtn--icon .tbtn-label{}
+
+/* Partage + nav */
+.topic-share{
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.topic-share__sep{
+  opacity:.5;
+  font-weight:700;
+}
+
+.topic-navlinks{
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.topic-navlinks a{
+  text-decoration:none;
+  color:var(--muted);
+}
+
+.topic-navlinks a:hover{
+  text-decoration:underline;
+}
+
+/* Fil d’Ariane + titre */
+.topic-head{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.breadcrumb{
+  font-size:13px;
+  color:var(--muted);
+}
+
+.breadcrumb a{
+  color:var(--muted);
+  text-decoration:none;
+}
+
+.breadcrumb a:hover{
+  text-decoration:underline;
+}
+
+.topic-title{
+  margin:4px 0 0;
+  font-family:"Cinzel",serif;
+  font-weight:700;
+  font-size:clamp(22px,3vw,30px);
+  letter-spacing:.04em;
+}
+
+/* Participants & pagination haute */
+.topic-posters{
+  padding:8px 10px;
+  border-radius:12px;
+  background:#fffdfa;
+  border:1px solid rgba(0,0,0,.05);
+  font-size:12px;
+}
+
+.topic-pagination-top{
+  text-align:right;
+  margin-top:4px;
+}
+
+/* ========= LISTE DES POSTS ========= */
+
+.posts{
+  display:grid;
+  gap:14px;
+}
+
+/* Carte post */
+.post{
+  background:var(--bg-2);
+  border-radius:var(--radius);
+  border:1px solid rgba(0,0,0,.035);
+  box-shadow:var(--shadow-sm);
+  overflow:hidden;
+}
+
+.post__grid{
+  display:grid;
+  grid-template-columns:260px minmax(0,1fr);
+}
+
+@media (max-width:900px){
+  .post__grid{
+    grid-template-columns:1fr;
+  }
+}
+
+/* ========= PROFIL LATÉRAL ========= */
+
+.post-profile{
+  position:relative;
+  padding:14px;
+  background:#fffdfa;
+  border-right:1px solid rgba(0,0,0,.05);
+}
+
+@media (max-width:900px){
+  .post-profile{
+    border-right:0;
+    border-bottom:1px solid rgba(0,0,0,.05);
+  }
+}
+
+/* Petit bandeau couleur groupe si tu veux plus tard
+.post-profile::before{
+  content:"";
+  position:absolute;
+  inset:0 auto 0 0;
+  width:6px;
+  background:var(--gold);
+}
+*/
+
+.p-name{
+  margin:0 0 4px;
+  font:700 18px/1.2 "Cinzel",serif;
+}
+
+.poster-profile{
+  font-size:12px;
+  color:var(--muted);
+}
+
+.dd_award{
+  margin-top:4px;
+}
+
+/* ========= CORPS DU POST ========= */
+
+.post-body{
+  padding:14px 16px 12px;
+}
+
+/* Ligne méta + actions */
+.post-meta{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:8px;
+}
+
+.post-track{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  flex-wrap:wrap;
+  font-size:12px;
+  color:var(--muted);
+}
+
+.post-track img{
+  vertical-align:middle;
+}
+
+.track-sep{
+  opacity:.4;
+}
+
+/* Actions (options de post FA) */
+.actions.post-options{
+  display:flex;
+  flex-wrap:wrap;
+  gap:4px;
+  font-size:0; /* pour virer les espaces entre images */
+}
+
+.post-options img{
+  margin-left:2px;
+}
+
+/* Bloc contenu + votes + signature */
+.post-content-wrap{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+/* Votes FA classiques */
+.vote{
+  display:inline-flex;
+  align-items:stretch;
+  border-radius:999px;
+  overflow:hidden;
+  border:1px solid rgba(0,0,0,.07);
+  background:#fffdfa;
+}
+
+.vote-button a{
+  display:block;
+  padding:4px 8px;
+  text-decoration:none;
+}
+
+.vote-bar,
+.vote-no-bar{
+  padding:4px 6px;
+}
+
+/* Contenu message */
+.postbody.post-content{
+  background:#fffdfa;
+  border-radius:var(--radius-sm);
+  border:1px solid rgba(0,0,0,.05);
+  padding:12px 14px;
+  font-size:14px;
+}
+
+/* Citations, code, etc. */
+.postbody blockquote{
+  margin:10px 0;
+  padding:10px 12px;
+  border-left:4px solid var(--gold);
+  background:#f7f1e4;
+  border-radius:8px;
+  color:#4a4036;
+}
+
+.postbody pre{
+  margin:10px 0;
+  padding:10px 12px;
+  border-radius:10px;
+  background:#1f2430;
+  color:#e9eef5;
+  overflow:auto;
+  font:13px/1.45 ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+
+.postbody code{
+  background:rgba(0,0,0,.06);
+  padding:.1em .3em;
+  border-radius:6px;
+}
+
+/* Signature FA */
+.signature_div{
+  margin-top:10px;
+  padding:10px 12px;
+  border-radius:12px;
+  background:linear-gradient(180deg,#fffdfa,#f6efe1);
+  border:1px solid rgba(0,0,0,.06);
+  font-style:italic;
+  font-size:13px;
+  color:#61564b;
+}
+
+/* Message édité */
+.gensmall{
+  font-size:11px;
+}
+
+/* Like / dislike (fa_like_div) */
+.fa_like_div{
+  margin-top:6px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  align-items:center;
+  font-size:12px;
+}
+
+.rep-button{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid rgba(0,0,0,.06);
+  background:#fff6e8;
+  cursor:pointer;
+  font-size:12px;
+}
+
+.rep-button svg{
+  display:block;
+}
+
+/* ========= PIED DU POST ========= */
+
+.post-footer{
+  margin-top:10px;
+  padding-top:8px;
+  border-top:1px solid rgba(0,0,0,.04);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.footer-nav a{
+  font-size:11px;
+  text-decoration:none;
+  color:var(--muted);
+}
+
+.footer-nav a:hover{
+  text-decoration:underline;
+}
+
+.footer-contacts{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+}
+
+/* ========= BAS DU SUJET ========= */
+
+.topic-footer{
+  margin-top:22px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+/* Barre titre bas + navigation */
+.topic-footer__titlebar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  padding:8px 12px;
+  border-radius:var(--radius-sm);
+  background:#f2ece1;
+  border:1px solid rgba(0,0,0,.05);
+}
+
+.topic-footer__titlebar .cattitle{
+  font-family:"Cinzel",serif;
+  font-size:15px;
+  font-weight:600;
+}
+
+/* Pagination basse + watch topic */
+.topic-footer__row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding:6px 10px;
+  border-radius:var(--radius-sm);
+  background:#fffdfa;
+  border:1px solid rgba(0,0,0,.04);
+  font-size:11px;
+  flex-wrap:wrap;
+}
+
+.topic-footer__row .page-buttons{
+  margin-left:auto;
+}
+
+/* Section trafic promo */
+.topic-promot{
+  border-radius:var(--radius-sm);
+  border:1px solid rgba(0,0,0,.05);
+  background:#fffdfa;
+}
+
+.topic-promot .catBottom{
+  padding:8px 10px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.topic-promot .row2{
+  padding:8px 10px;
+}
+
+/* Règles du forum */
+.forum-rules{
+  border-radius:var(--radius-sm);
+  border:1px solid rgba(0,0,0,.05);
+  background:#fffdfa;
+}
+
+.forum-rules .catBottom{
+  padding:8px 10px;
+}
+
+.forum-rules .rules-inner{
+  display:flex;
+  gap:10px;
+  padding:10px;
+}
+
+.forum-rules .logo img{
+  max-width:60px;
+  height:auto;
+}
+
+/* Quick reply */
+.quickreply{
+  padding:10px;
+  border-radius:var(--radius-sm);
+  border:1px solid rgba(0,0,0,.04);
+  background:#fffdfa;
+}
+
+/* Permissions + breadcrumb bas */
+.topic-meta-bottom{
+  border-radius:var(--radius-sm);
+  border:1px solid rgba(0,0,0,.05);
+  background:#fffdfa;
+  padding:0;
+}
+
+.topic-perms{
+  display:flex;
+  padding:8px 10px;
+  gap:10px;
+}
+
+.topic-footer__breadcrumb{
+  padding:6px 10px;
+  border-top:1px solid rgba(0,0,0,.05);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* Jumpbox + mod tools */
+.topic-jumpbox{
+  margin-top:10px;
+  border-radius:var(--radius-sm);
+  border:1px solid rgba(0,0,0,.05);
+  background:#fffdfa;
+  padding:8px 10px 10px;
+}
+
+.jumpbox-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.jumpbox-left{
+  display:flex;
+  gap:6px;
+  align-items:center;
+}
+
+.jumpbox-right{
+  margin-left:auto;
+}
+
+.topic-modtools{
+  margin-top:8px;
+  padding-top:8px;
+  border-top:1px solid rgba(0,0,0,.05);
+  font-size:12px;
+}
+
+/* ========= ÉTATS, RESPONSIVE ========= */
+
+.post--hidden{
+  opacity:.7;
+}
+
+.coa-nopost{
+  padding:10px;
+  border-radius:var(--radius-sm);
+  background:#fffdfa;
+  border:1px solid rgba(0,0,0,.05);
+}
+
+/* Petits ajustements responsive */
+@media (max-width:700px){
+  .topic-tools{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .topic-footer__row{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .post-footer{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}
