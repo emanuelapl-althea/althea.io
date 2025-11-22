@@ -541,13 +541,6 @@ display: grid;
 }
 
 /* Carte post */
-.post{
-  background:var(--bg-2);
-  border-radius:var(--radius);
-  border:1px solid rgba(0,0,0,.035);
-  box-shadow:var(--shadow-sm);
-  overflow:hidden;
-}
 
 .post__grid{
   display:grid;
