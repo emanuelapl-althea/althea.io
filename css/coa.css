@@ -1139,6 +1139,6 @@ padding-left:0;
     border: 1px solid rgba(0, 0, 0, .06);
 }
 
-.coa-topicpage .tbtn:first-of-type{
+.coa-topicpage .tbtn:first-of-type, .coa-topicpage .tbtn:nth-of-type(2){
    padding:0;
 }
