@@ -1024,13 +1024,6 @@ display: grid;
 .post-track a:hover{ text-decoration:underline }
 .track-sep{opacity:.4}
 .topic-ref{max-width:42ch;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:700;color:var(--ink)}
-
-.action{
-  display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border-radius:999px;
-  background:linear-gradient(180deg,#e9d9b6,#cdb27e);color:#2b231d;text-decoration:none;
-  font-weight:800;font-size:12px;border:1px solid rgba(0,0,0,.08);
-  box-shadow:0 8px 18px rgba(200,170,110,.28), inset 0 1px 0 rgba(255,255,255,.45);
-}
 .action img {
     align-items: center;
     padding: 7px 10px;
@@ -1158,6 +1151,7 @@ padding-left:0;
 }
 span.action {
     display: flex;
+       align-items: center;
     gap: .25rem;
 }
 span.action img, span.action a {
