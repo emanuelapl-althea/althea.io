@@ -1131,3 +1131,8 @@ display: grid;
     width: fit-content;
     padding: 5px 10px;
 }
+.coa-topicpage .tbtn img {
+    max-height: 36px;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 0, 0, .06);
+}
