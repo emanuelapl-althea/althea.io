@@ -1133,6 +1133,9 @@ display: grid;
 padding-left:0;
              float: none;
 }
+.coa-topicgrid__posters{
+   padding-left:0;
+}
 .coa-topicpage .tbtn img {
     max-height: 36px;
     border-radius: 999px;
