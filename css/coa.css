@@ -1076,3 +1076,56 @@ display: grid;
   .post-footer{flex-direction:column;align-items:flex-start}
   .topic-ref{max-width:24ch}
 }
+
+/* Conteneur général de l’en-tête */
+.coa-topichead {
+  padding: 1rem 1.5rem;
+}
+
+/* Grid principale */
+.coa-topicgrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "reply share"
+    "breadcrumb breadcrumb"
+    "title title"
+    "posters pagination";
+  row-gap: 0.6rem;
+  column-gap: 1.25rem;
+  align-items: center;
+}
+
+/* Zones nommées */
+.coa-topicgrid__reply {
+  grid-area: reply;
+}
+
+.coa-topicgrid__share {
+  grid-area: share;
+  justify-self: end;
+}
+
+.coa-topicgrid__breadcrumb {
+  grid-area: breadcrumb;
+}
+
+.coa-topicgrid__title {
+  grid-area: title;
+  margin: 0;
+}
+
+.coa-topicgrid__posters {
+  grid-area: posters;
+}
+
+.coa-topicgrid__pagination {
+  grid-area: pagination;
+  justify-self: end;
+}
+
+/* Optionnel : harmoniser un peu la pagination en haut */
+.coa-topicgrid__pagination .pagination span,
+.coa-topicgrid__pagination .pagination a {
+  margin: 0 0.1rem;
+}
