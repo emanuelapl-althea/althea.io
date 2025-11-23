@@ -1130,6 +1130,8 @@ display: grid;
     font-family: var(--ff-mono);
     width: fit-content;
     padding: 5px 10px;
+padding-left:0;
+             float: none;
 }
 .coa-topicpage .tbtn img {
     max-height: 36px;
