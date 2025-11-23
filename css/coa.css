@@ -1138,3 +1138,7 @@ padding-left:0;
     border-radius: 999px;
     border: 1px solid rgba(0, 0, 0, .06);
 }
+
+.coa-topicpage .tbtn:first-of-type{
+   padding:0;
+}
