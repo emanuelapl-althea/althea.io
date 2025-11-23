@@ -1125,3 +1125,9 @@ display: grid;
 .coa-topicgrid__pagination .pagination a {
   margin: 0 0.1rem;
 }
+.poster-list {
+    display: flex;
+    font-family: var(--ff-mono);
+    width: fit-content;
+    padding: 5px 10px;
+}
