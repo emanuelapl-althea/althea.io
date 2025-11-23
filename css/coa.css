@@ -1087,9 +1087,9 @@ display: grid;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   grid-template-areas:
-    "reply share"
     "breadcrumb breadcrumb"
     "title title"
+    "reply share"
     "posters pagination";
   row-gap: 0.6rem;
   column-gap: 1.25rem;
