@@ -1008,7 +1008,7 @@ display: grid;
 .p-sbtn svg{ width:17px; height:17px; fill:var(--gold-2) }
 .p-sbtn.optional{ opacity:.9 } .p-sbtn.optional:hover{ opacity:1 }
 
-.p-box{background:#fffdfa;border:1px solid rgba(0,0,0,.06);border-radius:12px;padding:10px;margin-top:10px}
+.p-box{background:#fffdfa;border:1px solid rgba(0,0,0,.06);border-radius:12px;padding:10px;}
 .p-box h4{font:700 13px/1 "Cinzel",serif;margin:0 0 8px;color:#5a4a3b;letter-spacing:.04em}
 .p-list{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:13px}
 .p-list b{font-weight:700;color:#332a24}
