@@ -1019,7 +1019,11 @@ display: grid;
 
 .post-body{padding:16px}
 .post-meta{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
-.post-track{display:flex;align-items:center;gap:10px;flex-wrap:wrap;min-width:0;font-size:13px;color:var(--muted)}
+.post-track{    display: flex;
+    align-items: center;
+    min-width: 0;
+    font-size: .65rem;
+    color: var(--muted);}
 .post-track a{ color:inherit; text-decoration:none }
 .post-track a:hover{ text-decoration:underline }
 .track-sep{opacity:.4}
