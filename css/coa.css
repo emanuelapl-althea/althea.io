@@ -1,7 +1,38 @@
 /* ================================
    COA — PAGE VIEWFORUM (coa-fview)
    ================================ */
+/* ===== Liens en gold-2 (tous états) ===== */
 
+a,
+a:link,
+a:visited,
+a:focus,
+a:active,
+a:hover {
+  color: var(--gold-2) !important;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+/* État hover (survol) */
+a:hover {
+  color: var(--gold-2) !important;
+  filter: brightness(1.15);
+  text-shadow: 0 0 6px var(--gold-2);
+}
+
+/* État focus (navigation clavier) */
+a:focus {
+  outline: none;
+  color: var(--gold-2) !important;
+  text-shadow: 0 0 8px var(--gold-2);
+}
+
+/* État active (clic) */
+a:active {
+  color: var(--gold-2) !important;
+  filter: brightness(0.9);
+}
 /* Wrapper général de la page forum */
 .coa-fview {
   max-width: 810px;
